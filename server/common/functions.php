@@ -16,6 +16,7 @@ function connect_db()
         exit;
     }
 }
+
 // エスケープ処理を行う関数
 function h($str)
 {
