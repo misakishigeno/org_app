@@ -22,3 +22,15 @@ function h($str)
     // ENT_QUOTES: シングルクオートとダブルクオートを共に変換する。
     return htmlspecialchars($str, ENT_QUOTES, 'UTF-8');
 }
+
+//signupバリデーション
+function signup_varidation($name, $email, $pass_word){
+
+    $errors = [];
+
+    if(empty($name)){
+        $errors[] = '名前が入力されていません';
+    }
+
+    return $errors;
+}
