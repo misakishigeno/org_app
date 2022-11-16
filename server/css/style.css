@@ -235,6 +235,13 @@ td.today {
 
 /*--upload----------------------------------------------------------------------*/
 
+.upmain {
+    text-align: center;
+    background-image: url(../..//images/upload/sun-g6fb7d45e3_1920.jpg);
+    background-size: 100%;
+
+}
+
 .content_center {
     display: flex;
     align-items: center;
@@ -247,7 +254,6 @@ td.today {
 .form_flex {
     width: 100%;
     display: flex;
-    flex-flow: column;
     align-items: center;
 }
 .upload_content_label {
@@ -256,7 +262,6 @@ td.today {
     justify-content: center;
     align-items: center;
     height: 50vh;
-    background-color: #CCCCCC;
     border-radius: 40px;
     color: #ffffff;
 }
@@ -298,10 +303,56 @@ td.today {
     margin-left: auto;
 }
 
+
+
+/* --show.php---------------------------------------------------------------------- */
+.content {
+    width: 50%;
+    margin: 0 auto;
+}
+.main_content img {
+    width: 100%;
+    height: 50vh;
+    border-radius: 40px;
+    object-fit: cover;
+}
+.main_content p {
+    margin-top: 10px;
+    width: 100%;
+    color: #4D4D4D;
+}
+.button {
+    margin-top: 10px;
+    display: flex;
+    justify-content: flex-end;
+}
+.edit_button {
+    font-size: 18px;
+    border-radius: 18px;
+    padding: 5px 30px;
+    background: #39B54A;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+.delete_button {
+    font-size: 18px;
+    border-radius: 18px;
+    padding: 5px 30px;
+    background: #CCCCCC;
+    margin-left: 10px;
+    color: #FFFFFF;
+}
+
+
 /*-レスポンシブ */
 @media (max-width: 900px) {
     /* upload.php */
     .upload_content_form {
+        width: 70%;
+    }
+
+    /* show.php */
+    .content {
         width: 70%;
     }
 }
@@ -309,6 +360,11 @@ td.today {
 @media (max-width: 600px) {
     /* upload.php */
     .upload_content_form {
+        width: 90%;
+    }
+
+    /* show.php */
+    .content {
         width: 90%;
     }
 }
