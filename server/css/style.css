@@ -6,8 +6,8 @@ html {
 }
 
 body {
+    height: 100%;
     font-family: 'M PLUS 1p', sans-serif;
-    min-height: calc(100vh - 80px - 70px);
 }
 
 
@@ -35,8 +35,8 @@ body {
 /*--フッター装飾---------------------------------------------------------*/
 
 .page_footer {
-    height: 70px;
-    background-color: #D2D2D2;
+    height: 50px;
+    background-color: transparent;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -47,57 +47,73 @@ body {
     font-size: 1rem;
 }
 
+/*--トップページ------------------------------------------------------------------*/
+
+.topmain {
+    background-image: url(images/top/seagull-3517437_960_720.jpg);
+    background-size: 100%;
+    width: 100%;
+    text-decoration: none;
+}
+
+
+
 /*--新規登録画面------------------------------------------------------------------*/
 
 .signup_main {
     text-align: center;
-    background-image: url(../images/signup/cody-reed-tEqIhwWJu1w-unsplash.jpg);
+    background-image: url(../images/signup/mohamed-shamil--EwZjmFOtjY-unsplash.jpg);
     background-size: 100%;
     color: #FFFFFF;
+    width: 100%;
+    height: 2000px;
 }
 
 
 .content_center {
-    display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-label {
-    display: block;
-    margin-top: 40px;
-    margin-bottom: 10px;
+
+
+.sulabel {
+    color: #ffffff;
+    font-size: 1.2rem;
 }
+
 
 input[type="email"],
 input[type="text"],
-input[type="password"] {
-    display: block;
+input[type="password"],
+input[type="date"] {
     width: 300px;
     color: #FFFFFF;
     background-color: transparent;
     border-bottom: 3px solid #000;
-    padding: 0px;
+    padding-bottom: 15px;
     font-size: 20px;
     text-align: center;
     border-bottom: 1px solid #cccccc;
     border-right: none;
     border-left: none;
     border-top: none;
+    margin: 15px auto;
 }
 
 input[type="email"]::placeholder,
 input[type="text"]::placeholder,
 input[type="password"]::placeholder {
-    color: #999999;
+    color: #c0c0c0;
 }
 
 input:focus {
     outline: none;
 }
 
-.btn-area {
+.btn_area {
     margin-top: 30px;
+    padding: 30px auto;
     text-align: center;
     display: flex;
     flex-direction: column;
@@ -110,10 +126,10 @@ input:focus {
     text-align: center;
     color: #ffffff;
     font-size: 1.2em;
-    border: none;
+    border: 6px ridge #f93dae;
     border-radius: 6px;
     text-shadow: 1px 1px 0px rgba(0, 0, 0, .1);
-    padding: 20px;
+    padding: 10px 40px;
     cursor: pointer;
 }
 
@@ -130,6 +146,7 @@ input:focus {
     margin-top: 100px;
     color: #ffffff;
     margin: 15px auto;
+    border: none;
 }
 
 /* --login.php---------------------------------------------------------------- */
@@ -138,32 +155,93 @@ input:focus {
     text-align: center;
     background-image: url(../images/login/snow-gd1b60158e_1920.jpg);
     background-size: 100%;
+    height: 2000px;
+    color: #FFFFFF;
+}
+
+.login_content {
+    margin: 60px auto;
+}
+
+
+.login_form {
+    margin-top: 30px;
+    font-size: 1.2rem;
+}
+
+
+.lilabel {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #ffffff;
+}
+
+/*--condition-------------------------------------------------------------------*/
+
+.condition_main {
+    text-align: center;
+    background-image: url(../images/login/snow-gd1b60158e_1920.jpg);
+    background-size: 100%;
     color: #FFFFFF;
 }
 
 
-
-.login_title {
+.condition_title {
     text-align: center;
     margin-top: 100px;
     margin-bottom: 50px;
+    font-size: 2.8rem;
 }
 
-.login_form {
+
+.condition_form {
     margin-top: 30px;
+    font-size: 1.8rem;
+}
+
+.cdlabel {
+    display: block;
+    margin-top: 40px;
+    margin-bottom: 10px;
+    color: #ffffff;
 }
 
 
-
-
-
-/*--トップページ-----------------------------------------------------------------*/
-
-
-.top_main {
+input[type="number"] {
+    width: 300px;
+    color: #FFFFFF;
+    background-color: transparent;
+    border-bottom: 3px solid #000;
+    padding: 0px;
+    font-size: 20px;
     text-align: center;
-    background-image: url(../images/top/夕焼けhand.png);
+    border-bottom: 1px solid #cccccc;
+    border-right: none;
+    border-left: none;
+    border-top: none;
+    margin: 15px auto;
+}
+
+input[type="radio"] {
+    width: 50px;
+    color: #FFFFFF;
+    padding: 0px;
+    font-size: 20px;
+    text-align: center;
+    margin: 15px auto;
+}
+
+
+/*--ユーザートップページ-----------------------------------------------------------------*/
+
+
+.user_top_main {
+    text-align: center;
+    background-image: url(../images/usertop/夕焼けhand.png);
     background-size: 100%;
+    height: 100%;
+    height: 2000px;
 }
 
 
@@ -190,14 +268,16 @@ input:focus {
 /*カレンダー*/
 #calendar {
     text-align: center;
-    width: 100%;
+    width: 80%;
+    margin: auto;
 }
 table {
     width: 100%;
+    margin: 4rem;
+
 }
 th {
     color: #000;
-    padding-bottom: 50px;
     text-align: center;
 }
 
@@ -364,6 +444,36 @@ td.today {
     margin-left: 10px;
     color: #FFFFFF;
 }
+
+
+
+
+
+
+
+
+
+
+
+/*--重複タグ指定場所--------------------------------------------------------------------------*/
+
+.sth {
+    width: 113px;
+}
+
+.std {
+    text-align: center;
+    width: 150px;
+    vertical-align: middle;
+    height: 20px;
+}
+
+.stable {
+    margin: 0;
+    width: 500px;
+}
+
+
 
 
 /*--レスポンシブ----------------------------------------------------------------------------- */

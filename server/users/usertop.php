@@ -3,17 +3,8 @@
 
 <?php include_once __DIR__ . '/../common/_head.html' ?>
 
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
-    <title>ENJOINT TOP</title>
-</head>
-
 <body>
-    <div class="top_main">
+    <div class="user_top_main">
         <?php include_once __DIR__ . '/../common/_header.php' ?>
         <div class="wrapper">
             <img class="sub-image" src="../images/myself.jpg" alt="自分の写真">

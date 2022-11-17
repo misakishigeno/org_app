@@ -8,14 +8,13 @@
 
         <main class="content_center wrapper">
             <div class="login_content">
-                <h2 class="login_title">login</h2>
                 <form class="login_form" action="" method="post">
-                    <label for="email">メールアドレス</label>
+                    <label class="lilabel" for="email">メールアドレス</label>
                     <input type="email" name="email" id="email" placeholder="Email">
-                    <label for="password">パスワード</label>
+                    <label class="lilabel" for="password">パスワード</label>
                     <input type="password" name="password" id="password" placeholder="Password">
                     <div class="button_area">
-                        <input type="submit" value="ログイン" class="btn submit-btn">
+                        <input type="submit" value="login" class="btn submit-btn">
                         <a href="login.php" class="btn link-btn">新規ユーザー登録</a>
 
                     </div>
