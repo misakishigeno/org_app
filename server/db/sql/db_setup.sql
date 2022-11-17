@@ -19,7 +19,6 @@ CREATE TABLE IF NOT EXISTS conditions (
     id INT PRIMARY KEY AUTO_INCREMENT,
     user_id INT NOT NULL,
     name VARCHAR(50) NOT NULL,
-    goal VARCHAR(255) NOT NULL,
     weight VARCHAR(255) NOT NULL,
     temperature VARCHAR(255) NOT NULL,
     defecation VARCHAR(255) NOT NULL,
