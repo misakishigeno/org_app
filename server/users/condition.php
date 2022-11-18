@@ -21,12 +21,11 @@
                 <label class="cdlabel" for="event">Event</label>
                 <input type="text" name="event" id="event" placeholder="Today's event">
                 <label class="cdlabel" for="meal">Meal</label>
-                <input type="checkbox" name="meal" id="meal" value="breakfast">Breakfast
-                <input type="checkbox" name="meal" id="meal" value="lunch">Lunch
-                <input type="checkbox" name="meal" id="meal" value="dinner">Dinner
+                <input type="checkbox" class="cdinput" name="meal" id="meal" value="breakfast">Breakfast
+                <input type="checkbox" class="cdinput" name="meal" id="meal" value="lunch">Lunch
+                <input type="checkbox" class="cdinput" name="meal" id="meal" value="dinner">Dinner
                 <div class="button_area">
                     <input type="submit" value="NEXT >> Training" class="btn submit-btn">
-                    <a href="login.php" class="btn link-btn">新規ユーザー登録</a>
 
                 </div>
             </form>

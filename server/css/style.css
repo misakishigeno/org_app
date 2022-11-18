@@ -170,6 +170,12 @@ h1 {
     font-size: 1.2rem;
 }
 
+.str {
+    height: 50px;
+}
+.str2 {
+    height: 100px;
+}
 
 input[type="email"],
 input[type="text"],
@@ -277,7 +283,7 @@ input[type="file"] {
 
 .condition_main {
     text-align: center;
-    background-image: url(../images/login/snow-gd1b60158e_1920.jpg);
+    background-image: url(../images/condition/diego-ph-v8QdhKbOoC0-unsplash.jpg);
     background-size: 100%;
     color: #FFFFFF;
 }
@@ -285,7 +291,7 @@ input[type="file"] {
 
 .condition_title {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 0;
     margin-bottom: 50px;
     font-size: 2.8rem;
 }
@@ -294,15 +300,22 @@ input[type="file"] {
 .condition_form {
     margin-top: 30px;
     font-size: 1.8rem;
+    padding: 0 35%;
 }
 
 .cdlabel {
     display: block;
-    margin-top: 40px;
+    margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 20%;
     color: #ffffff;
+    font-size: 20px;
+    text-align: left;
 }
 
+.cdinput {
+    margin: auto 20px;
+}
 
 input[type="number"] {
     width: 300px;
@@ -569,7 +582,7 @@ td.today {
 /*--重複タグ指定場所--------------------------------------------------------------------------*/
 
 .sth {
-    width: 113px;
+    width: 136px;
 }
 
 .std {
@@ -584,7 +597,9 @@ td.today {
     width: 500px;
 }
 
-
+signupform {
+    margin-top: 0;
+}
 
 
 /*--レスポンシブ----------------------------------------------------------------------------- */

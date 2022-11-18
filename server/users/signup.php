@@ -66,7 +66,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <div class="signup_main">
-        <?php include_once __DIR__ . '/../common/_header.php' ?>
+        <header class="page_header">
+            <h1>
+                <a class="logo" href="../index.php">
+                    ENJOINT
+                </a>
+            </h1>
+        </header>
+
         <main class="content_center wrapper">
 
             <?php include_once __DIR__ . '/../common/_errors.php' ?>
@@ -115,7 +122,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <th class="sth"><label class="sulabel" for="goal">目標</label></th>
                         <td class="std"><input type="text" name="goal" id="goal" placeholder="goal" value="<?= h($goal) ?>"></td>
                     </tr>
-                    <tr class="str">
+                    <tr class="str str2">
                         <th class="sth"><label class="sulabel" for="image">プロフィール画像</label></th>
                         <td class="std"><input type="file" name="image" id="image" value="<?= h($image) ?>"></td>
                     </tr>
