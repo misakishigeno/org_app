@@ -25,12 +25,20 @@ function h($str)
 }
 
 //signupバリデーション
-function signup_varidation($name, $email, $pass_word){
-
+function signup_validate($email, $name, $password)
+{
     $errors = [];
 
-    if(empty($name)){
-        $errors[] = '名前が入力されていません';
+    if (empty($email)) {
+        $errors[] = MSG_EMAIL_REQUIRED;
+    }
+
+    if (empty($name)) {
+        $errors[] = MSG_NAME_REQUIRED;
+    }
+
+    if (empty($password)) {
+        $errors[] = MSG_PASSWORD_REQUIRED;
     }
 
     return $errors;

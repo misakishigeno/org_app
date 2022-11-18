@@ -10,33 +10,40 @@ body {
     font-family: 'M PLUS 1p', sans-serif;
 }
 
+.wrapper {
+    margin: 0;
+    padding: 2% 4%;
+}
+
 
 /*--ヘッダー装飾-------------------------------------------------*/
 
-.wrapper {
-    margin: 0%;
-    padding: 0 4%;
-}
 
 .page_header {
     background-color: transparent;
-    height: 80px;
+    height: 150px;
     align-items: center;
-    justify-content: space-between;
+    margin: 0%;
+    padding: 2% 4%;
+}
+
+h1 {
+text-align: center;
+    height: 100%;
+    padding-top: 20px;
 }
 
 .logo {
     font-size: 50px;
     text-decoration: none;
     color: #FFFFFF;
-    margin-top: 20%;
 }
 
 /*--フッター装飾---------------------------------------------------------*/
 
 .page_footer {
     height: 50px;
-    background-color: transparent;
+    background-color: #4682B4;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -50,11 +57,19 @@ body {
 /*--トップページ------------------------------------------------------------------*/
 
 .topmain {
-    background-image: url(images/top/seagull-3517437_960_720.jpg);
+    background-image: url(/images/top/seagull-3517437_960_720.jpg);
     background-size: 100%;
     width: 100%;
+    height: 1000px;
     text-decoration: none;
 }
+
+.top {
+    text-decoration: none;
+    margin: auto;
+    text-align: center;
+}
+
 
 
 

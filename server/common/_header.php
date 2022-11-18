@@ -1,4 +1,4 @@
-<header class="page_header wrapper">
+<header class="page_header">
     <h1>
         <a class="logo" href="/users/usertop.php">
             ENJOINT
