@@ -11,7 +11,7 @@
     <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=M+PLUS+Rounded+1c&family=PT+Serif&family=Playfair+Display:wght@600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v6.1.1/css/all.css">
     <link rel="stylesheet" href="./css/style.css">
 
@@ -20,7 +20,7 @@
 <body>
 
     <div class="topmain">
-        <h1>
+        <h1 class="toph1">
             <a class="top" href="users/signup.php">ENJOINT</a>
         </h1>
     </div>
