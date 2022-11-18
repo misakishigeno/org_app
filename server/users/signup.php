@@ -115,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <th class="sth"><label class="sulabel" for="goal">目標</label></th>
                         <td class="std"><input type="text" name="goal" id="goal" placeholder="goal" value="<?= h($goal) ?>"></td>
                     </tr>
-                    <tr class="str">
+                    <tr class="str str2">
                         <th class="sth"><label class="sulabel" for="image">プロフィール画像</label></th>
                         <td class="std"><input type="file" name="image" id="image" value="<?= h($image) ?>"></td>
                     </tr>
@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 </table>
 
-                <div class="btn-area">
+                <div class="btn_area">
                     <input type="submit" value="START" class="btn submit-btn">
                     <a href="login.php" class="btn link-btn">ログインはこちら</a>
                 </div>

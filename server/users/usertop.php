@@ -21,9 +21,7 @@ if (isset($_SESSION['current_user'])) {
     <div class="user_top_main">
         <?php include_once __DIR__ . '/../common/_header.php' ?>
         <div class="wrapper">
-            <img class="sub-image" src="../images/myself.jpg" alt="自分の写真">
-            <p>My Name</p>
-            <p>目標：●●●●</p>
+
         </div>
         <div class="container">
             <article class="main">
