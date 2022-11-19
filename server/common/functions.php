@@ -282,20 +282,21 @@ function condition_validate($condition_date, $weight, $temperature, $defecation,
 
 
 //condition登録
-function insert_condition($condition_date, $weight, $temperature, $defecation,$event,$meal)
+function insert_condition($user_id, $condition_date, $weight, $temperature, $defecation,$event,$meal)
 {
     try {
         $dbh = connect_db();
 
         $sql = <<<EOM
         INSERT INTO
-            users
-            (condition_date, weight, temperature, defecation, event, meal)
+            conditions
+            (user_id, condition_date, weight, temperature, defecation, event, meal)
         VALUES
-            (:condition_date, :weight, :temperature, :defecation,:event,:meal);
+            (:user_id, :condition_date, :weight, :temperature, :defecation,:event,:meal);
         EOM;
 
         $stmt = $dbh->prepare($sql);
+        $stmt->bindValue(':user_id', $user_id, PDO::PARAM_INT);
         $stmt->bindValue(':condition_date', $condition_date, PDO::PARAM_STR);
         $stmt->bindValue(':weight', $weight, PDO::PARAM_STR);
         $stmt->bindValue(':temperature', $temperature, PDO::PARAM_STR);
