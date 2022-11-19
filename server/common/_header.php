@@ -11,7 +11,7 @@
                 <p>
                     <?= $current_user['name'] ?>
                 </p>
-                <a class="header_logout_button" href="/users/logout.php" class="nav-link"><i class="fa-sharp fa-solid fa-right-from-bracket"></i></a>
+                <a class="header_logout_button" href="/logout.php" class="nav-link"><i class="fa-sharp fa-solid fa-right-from-bracket"></i></a>
             <?php else : ?>
                 <a class="header_login_button" href="/login.php" class="nav-link">ログイン</a>
             <?php endif; ?>
