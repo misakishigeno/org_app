@@ -20,17 +20,21 @@ if (isset($_SESSION['current_user'])) {
 <body>
     <div class="user_top_main">
         <?php include_once __DIR__ . '/../common/_header.php' ?>
-        <div class="wrapper">
 
-        </div>
         <div class="container">
             <article class="main">
-                <h2 class="date">Today</h2>
 
                 <!--今日の日付表示-->
                 <span id="view_today"></span>
                 <!--javascript-->
                 <script src="../js/toppage.js"></script>
+
+                <a href="condition.php" class="btn1 btn-svg">
+                    <svg>
+                        <rect x="2" y="2" rx="0" fill="none" width=200 height="50"></rect>
+                    </svg>
+                    <span>Write down <i class="fa-solid fa-feather"></i></span>
+                </a>
 
 
                 <!--カレンダー https://nyanblog2222.com/programming/javascript/2749/-->
