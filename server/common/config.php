@@ -21,4 +21,15 @@ define('MSG_TEAM_REQUIRED', '所属チームが未入力です');
 define('MSG_GOAL_REQUIRED', '目標が未入力です');
 define('MSG_IMAGE_REQUIRED', '画像が未選択です');
 define('MSG_EMAIL_DUPLICATE', 'そのメールアドレスは既に会員登録されています');
+
+//ログイン
 define('MSG_EMAIL_PASSWORD_NOT_MATCH', 'メールアドレスかパスワードが間違っています');
+
+//Condition
+define('MSG_CONDITION_DATE_REQUIRED', '日付が未入力です');
+define('MSG_WEIGHT_REQUIRED', '体重が未入力です');
+define('MSG_TEMPERATURE_REQUIRED', '体温が未入力です');
+define('MSG_DEFECATION_REQUIRED', '御通が未選択です');
+define('MSG_EVENT_REQUIRED', 'イベントが未入力です');
+define('MSG_MEAL_REQUIRED', '食事が未入力です');
+
