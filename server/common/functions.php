@@ -191,7 +191,7 @@ function user_login($user)
 {
     $_SESSION['current_user']['id'] = $user['id'];
     $_SESSION['current_user']['name'] = $user['name'];
-    header('Location: ../photos/index.php');
+    header('Location: usertop.php');
     exit;
 }
 
@@ -239,6 +239,71 @@ function insert_photo($user_id, $image)
         $stmt->bindValue(':image', $image, PDO::PARAM_STR);
         $stmt->execute();
 
+        return true;
+    } catch (PDOException $e) {
+        echo $e->getMessage();
+        return false;
+    }
+}
+
+
+//Conditionバリデーション------------------------------------------------------------------------
+
+
+function condition_validate($condition_date, $weight, $temperature, $defecation,$event,$meal)
+{
+    $errors = [];
+
+    if (empty($condition_date)) {
+        $errors[] = MSG_CONDITION_DATE_REQUIRED;
+    }
+
+    if (empty($weight)) {
+        $errors[] = MSG_WEIGHT_REQUIRED;
+    }
+
+    if (empty($temperature)) {
+        $errors[] = MSG_TEMPERATURE_REQUIRED;
+    }
+
+    if (empty($defecation)) {
+        $errors[] = MSG_DEFECATION_REQUIRED;
+    }
+
+    if (empty($event)) {
+        $errors[] = MSG_EVENT_REQUIRED;
+    }
+
+    if (empty($meal)) {
+        $errors[] = MSG_MEAL_REQUIRED;
+    }
+    return $errors;
+}
+
+
+//condition登録
+function insert_condition($condition_date, $weight, $temperature, $defecation,$event,$meal)
+{
+    try {
+        $dbh = connect_db();
+
+        $sql = <<<EOM
+        INSERT INTO
+            users
+            (condition_date, weight, temperature, defecation, event, meal)
+        VALUES
+            (:condition_date, :weight, :temperature, :defecation,:event,:meal);
+        EOM;
+
+        $stmt = $dbh->prepare($sql);
+        $stmt->bindValue(':condition_date', $condition_date, PDO::PARAM_STR);
+        $stmt->bindValue(':weight', $weight, PDO::PARAM_STR);
+        $stmt->bindValue(':temperature', $temperature, PDO::PARAM_STR);
+        $stmt->bindValue(':defecation', $defecation, PDO::PARAM_STR);
+        $stmt->bindValue(':event', $event, PDO::PARAM_STR);
+        $stmt->bindValue(':meal', $meal, PDO::PARAM_STR);
+
+        $stmt->execute();
         return true;
     } catch (PDOException $e) {
         echo $e->getMessage();

@@ -44,20 +44,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $errors = signup_validate($email, $name, $password, $start_date, $birthday, $age, $sex, $sports_event, $team, $goal,);
 
-    //ファイル名の変更（重複がないように）
-    if (empty($errors)) {
-        $image = date('YmdHis') . '_' . $upload_file;
-        //アップロードした画像をファイルへ移動
-        $path = '../images/users/profile/' . $image;
-
-
-        if ((move_uploaded_file($upload_tmp_file, $path)) &&
-            insert_user($email, $name, $password, $start_date, $birthday, $age, $sex, $sports_event, $team, $goal, $image)
-        ) {
-            header('Location: login.php');
-            exit;
-        }
-    }
 }
 ?>
 
@@ -96,11 +82,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </tr>
                     <tr class="str">
                         <th class="sth"><label class="sulabel" for="start_date">開始日</label></th>
-                        <td class="std"><input type="date" name="start_date" id="start_date" min="2022-11-01" max="2040-12-31" value="<?= h($start_date) ?>"></td>
+                        <td class="std"><input type="date" name="start_date" id="start_date" value="2022-11-01" min="2022-11-01" max="2040-12-31" value="<?= h($start_date) ?>"></td>
                     </tr>
                     <tr class="str">
                         <th class="sth"><label class="sulabel" for="birthday">生年月日</label></th>
-                        <td class="std"><input type="date" name="birthday" id="birthday" min="1980-01-01" max="2040-12-31" value="<?= h($birthday) ?>"></td>
+                        <td class="std"><input type="date" name="birthday" id="birthday" value="2000-01-01" min="1980-01-01" max="2040-12-31" value="<?= h($birthday) ?>"></td>
                     </tr>
                     <tr class="str">
                         <th class="sth"><label class="sulabel" for="age">年齢</label></th>

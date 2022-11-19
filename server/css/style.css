@@ -170,6 +170,12 @@ h1 {
     font-size: 1.2rem;
 }
 
+.str {
+    height: 50px;
+}
+.str2 {
+    height: 100px;
+}
 
 input[type="email"],
 input[type="text"],
@@ -277,7 +283,7 @@ input[type="file"] {
 
 .condition_main {
     text-align: center;
-    background-image: url(../images/login/snow-gd1b60158e_1920.jpg);
+    background-image: url(../images/condition/diego-ph-v8QdhKbOoC0-unsplash.jpg);
     background-size: 100%;
     color: #FFFFFF;
 }
@@ -285,7 +291,7 @@ input[type="file"] {
 
 .condition_title {
     text-align: center;
-    margin-top: 100px;
+    margin-top: 0;
     margin-bottom: 50px;
     font-size: 2.8rem;
 }
@@ -294,15 +300,22 @@ input[type="file"] {
 .condition_form {
     margin-top: 30px;
     font-size: 1.8rem;
+    padding: 0 35%;
 }
 
 .cdlabel {
     display: block;
-    margin-top: 40px;
+    margin-top: 10px;
     margin-bottom: 10px;
+    margin-left: 20%;
     color: #ffffff;
+    font-size: 20px;
+    text-align: left;
 }
 
+.cdinput {
+    margin: auto 20px;
+}
 
 input[type="number"] {
     width: 300px;
@@ -358,8 +371,82 @@ input[type="radio"] {
 /*日付*/
 #view_today {
     font-size: 30px;
-
+    text-decoration: none;
+    display: block;
+    margin-bottom: 2rem;
 }
+
+
+
+.btn1,
+a.btn,
+button.btn {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    position: relative;
+    display: block;
+    margin: auto;
+    padding: 1rem 3rem;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+    text-align: center;
+    vertical-align: middle;
+    text-decoration: none;
+    color: #212529;
+    border-radius: 0.5rem;
+}
+
+a.btn-svg {
+    font-weight: 700;
+    line-height: 54px;
+
+    width: 204px;
+    height: 54px;
+    padding: 0;
+
+    cursor: pointer;
+    text-decoration: none;
+
+    background-color: transparent;
+}
+
+a.btn-svg svg {
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    width: 100%;
+    height: 100%;
+}
+
+a.btn-svg svg rect {
+    -webkit-transition: all 400ms ease;
+    transition: all 400ms ease;
+
+    stroke: #DB7093;
+    stroke-width: 2;
+    stroke-dasharray: 200px, 16px;
+    stroke-dashoffset: 70px;
+}
+
+a.btn-svg:hover svg rect {
+    stroke-dashoffset: 284px;
+}
+
+a.btn-svg span {
+    color: #000;
+}
+
+
+
+
+
+
 
 /*カレンダー*/
 #calendar {
@@ -569,7 +656,7 @@ td.today {
 /*--重複タグ指定場所--------------------------------------------------------------------------*/
 
 .sth {
-    width: 113px;
+    width: 136px;
 }
 
 .std {
@@ -584,7 +671,9 @@ td.today {
     width: 500px;
 }
 
-
+signupform {
+    margin-top: 0;
+}
 
 
 /*--レスポンシブ----------------------------------------------------------------------------- */
