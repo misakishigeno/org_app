@@ -123,7 +123,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
                 </table>
 
-                <div class="btn-area">
+                <div class="btn_area">
                     <input type="submit" value="START" class="btn submit-btn">
                     <a href="login.php" class="btn link-btn">ログインはこちら</a>
                 </div>
