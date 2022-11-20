@@ -175,6 +175,9 @@ h1 {
 .str2 {
     height: 100px;
 }
+.str2 {
+    height: 100px;
+}
 
 input[type="email"],
 input[type="text"],
@@ -200,6 +203,10 @@ input[type="password"]::placeholder {
     color: #c0c0c0;
 }
 
+input[type="file"] {
+    text-align: center;
+}
+
 input:focus {
     outline: none;
 }
@@ -210,7 +217,7 @@ input[type="file"] {
 }
 
 .btn_area {
-    margin-top: 30px;
+    margin-top: 50px;
     padding: 30px auto;
     text-align: center;
     display: flex;
@@ -652,7 +659,7 @@ td.today {
 /*--重複タグ指定場所--------------------------------------------------------------------------*/
 
 .sth {
-    width: 136px;
+    width: 113px;
 }
 
 .std {
