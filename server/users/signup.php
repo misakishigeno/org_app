@@ -28,8 +28,12 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $upload_tmp_file = $_FILES['image']['tmp_name'];
 
     $errors = insert_validate($upload_file);
-
-
+    //ファイル名の変更（重複がないように）
+    if (empty($errors)) {
+        $image = date('YmdHis') . '_' . $upload_file;
+        //アップロードした画像をファイルへ移動
+        $path = '../images/users/profile' . $image;
+    }
 
     $email = filter_input(INPUT_POST, 'email');
     $name = filter_input(INPUT_POST, 'name');
@@ -44,21 +48,15 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
     $errors = signup_validate($email, $name, $password, $start_date, $birthday, $age, $sex, $sports_event, $team, $goal,);
 
-    //ファイル名の変更（重複がないように）
-    if (empty($errors)) {
-        $image = date('YmdHis') . '_' . $upload_file;
-        //アップロードした画像をファイルへ移動
-        $path = '../images/users/profile/' . $image;
-
-
-        if ((move_uploaded_file($upload_tmp_file, $path)) &&
-            insert_user($email, $name, $password, $start_date, $birthday, $age, $sex, $sports_event, $team, $goal, $image)
-        ) {
-            header('Location: login.php');
-            exit;
-        }
+    if ((move_uploaded_file($upload_tmp_file, $path)) &&
+        empty($errors) &&
+        insert_user($email, $name, $password, $start_date, $birthday, $age, $sex, $sports_event, $team, $goal, $image)
+    ) {
+        header('Location: index.php');
+        exit;
     }
 }
+
 ?>
 
 
@@ -68,14 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 
 <body>
     <div class="signup_main">
-        <header class="page_header">
-            <h1>
-                <a class="logo" href="../index.php">
-                    ENJOINT
-                </a>
-            </h1>
-        </header>
-
+        <?php include_once __DIR__ . '/../common/_header.php' ?>
         <main class="content_center wrapper">
 
             <?php include_once __DIR__ . '/../common/_errors.php' ?>
@@ -96,11 +87,11 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </tr>
                     <tr class="str">
                         <th class="sth"><label class="sulabel" for="start_date">開始日</label></th>
-                        <td class="std"><input type="date" name="start_date" id="start_date" min="2022-11-01" max="2040-12-31" value="<?= h($start_date) ?>"></td>
+                        <td class="std"><input type="date" name="start_date" id="start_date" value="2022-11-01" min="2022-11-01" max="2040-12-31" value="<?= h($start_date) ?>"></td>
                     </tr>
                     <tr class="str">
                         <th class="sth"><label class="sulabel" for="birthday">生年月日</label></th>
-                        <td class="std"><input type="date" name="birthday" id="birthday" min="1980-01-01" max="2040-12-31" value="<?= h($birthday) ?>"></td>
+                        <td class="std"><input type="date" name="birthday" id="birthday" value="2000-01-01" min="1980-01-01" max="2040-12-31" value="<?= h($birthday) ?>"></td>
                     </tr>
                     <tr class="str">
                         <th class="sth"><label class="sulabel" for="age">年齢</label></th>
@@ -108,8 +99,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     </tr>
                     <tr class="str">
                         <th class="sth"><label class="sulabel" for="sex">性別</label></th>
-                        <td class="std"><input type="radio" name="sex" value="1" <?php if ($sex == 1) echo  "checked" ?>>男
-                            <input type="radio" name="sex" value="2" <?php if ($sex == 2) echo  "checked" ?>>女
+                        <td class="std"><input type="radio" neme="sex" value="male" value="<?= h($sex) ?>">男
+                            <input type="radio" name="sex" value="female" value="<?= h($sex) ?>">女
                         </td>
                     </tr>
                     <tr class="str">
@@ -124,7 +115,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                         <th class="sth"><label class="sulabel" for="goal">目標</label></th>
                         <td class="std"><input type="text" name="goal" id="goal" placeholder="goal" value="<?= h($goal) ?>"></td>
                     </tr>
-                    <tr class="str str2">
+                    <tr class="str">
                         <th class="sth"><label class="sulabel" for="image">プロフィール画像</label></th>
                         <td class="std"><input type="file" name="image" id="image" value="<?= h($image) ?>"></td>
                     </tr>
