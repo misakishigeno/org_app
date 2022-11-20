@@ -11,7 +11,7 @@ $errors = [];
 
 // ログイン判定
 if (isset($_SESSION['current_user'])) {
-    header('Location: ../usertop.php');
+    header('Location: usertop.php');
     exit;
 }
 
