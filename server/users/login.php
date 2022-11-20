@@ -11,7 +11,7 @@ $errors = [];
 
 // ログイン判定
 if (isset($_SESSION['current_user'])) {
-    header('Location: user.php');
+    header('Location: ../usertop.php');
     exit;
 }
 
@@ -27,7 +27,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
         //password_verify関数を使って、入力されたパスワード($password)とメールアドレスを基にデータベースから取得したパスワード($user['password'])が適合するか調べる
         if (!empty($user) && password_verify($password, $user['password'])) {
             user_login($user);
-            
         } else {
             $errors[] = MSG_EMAIL_PASSWORD_NOT_MATCH;
         }
@@ -56,7 +55,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                     <input type="password" name="password" id="password" placeholder="Password" value="<?= h($email) ?>">
                     <div class="button_area">
                         <input type="submit" value="login" class="btn submit-btn">
-                        <a href="signup.php" class="btn link-btn">新規ユーザー登録</a>
+                        <a href="login.php" class="btn link-btn">新規ユーザー登録</a>
 
                     </div>
                 </form>

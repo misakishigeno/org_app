@@ -57,7 +57,6 @@ function user_condition($user)
 }
 
 ?>
-
 <!DOCTYPE html>
 <html lang="ja">
 <?php include_once __DIR__ . '/../common/_head.html' ?>
@@ -95,7 +94,8 @@ function user_condition($user)
                 <input type="checkbox" class="meal" id="meal" name="meal" value="2" <?php if ($meal == 3) echo  "checked" ?>>Dinner
                 <input type="checkbox" class="meal" id="meal" name="meal" value="3" <?php if ($meal == 4) echo  "checked" ?>>Not eating
                 <div class="button_area">
-                    <input type="submit" value="NEXT >> ENJOINT" class="btn submit-btn">
+                    <input type="submit" value="NEXT >> Training" class="btn submit-btn">
+                    <a href="login.php" class="btn link-btn">新規ユーザー登録</a>
 
                 </div>
             </form>

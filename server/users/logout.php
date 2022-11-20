@@ -15,5 +15,3 @@ session_destroy();
 
 // ログイン画面へリダイレクト
 header('Location: ../index.php');
-
-

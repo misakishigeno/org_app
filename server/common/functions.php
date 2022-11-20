@@ -191,7 +191,7 @@ function user_login($user)
 {
     $_SESSION['current_user']['id'] = $user['id'];
     $_SESSION['current_user']['name'] = $user['name'];
-    header('Location: usertop.php');
+    header('Location: ../photos/index.php');
     exit;
 }
 
@@ -245,7 +245,6 @@ function insert_photo($user_id, $image)
         return false;
     }
 }
-
 
 //Conditionバリデーション------------------------------------------------------------------------
 
